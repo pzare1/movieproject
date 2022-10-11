@@ -1,0 +1,16 @@
+.banner{
+    background-color: black;
+    height: 400px;
+}
+button.btn.btn-custom-header {
+    color: white;
+    background-color: #282828;
+    margin-right: 10px;
+}
+button.btn.btn-custom-sign {
+    background-color: #e10000;
+    color: white;
+}
+p.text-banner.col-md-8.offset-2 {
+    color: #5d5c5c;
+}
