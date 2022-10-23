@@ -13,7 +13,6 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <App />
-      {/* <Test/> */}
     </Provider>
   </React.StrictMode>
 );

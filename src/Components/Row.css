@@ -1,0 +1,41 @@
+.total{
+    margin-left: 20px;
+}
+.trending-row{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: center;
+    
+}
+.trending-row img{
+    max-width: 400px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+h3.text-secondary {
+    text-align: center;
+    padding: 50px;
+    font-weight: bolder;
+}
+.trending-row img:hover{
+    transform: scale(2);
+
+}
+.norow{
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    justify-content: center;
+    
+}
+.norow img{
+    max-width: 300px;
+    margin: 15px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.norow img:hover{
+    transform: scale(2);
+}

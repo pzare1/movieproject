@@ -1,0 +1,21 @@
+.backlogin{
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(8, 8, 8, 0.3)), url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    width: 100%;
+    height: 1000px;
+    background-position: bottom !important;
+    background-repeat: no-repeat;   
+}
+.text-sign{
+    margin-top: 130px;
+}
+input.signinput {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+button.signin.btn.btn-danger {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+input.signinput {
+    max-width: 350px;
+}
