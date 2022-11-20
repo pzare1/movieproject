@@ -4,3 +4,7 @@
 .newdiv {
     align-items: center;
 }
+button.btn.btn.btn-light.text-white.subbtn {
+    background-color: transparent;
+    margin-top: 25px;
+}
