@@ -5,25 +5,30 @@ import {
   BrowserRouter,
   Routes,
   Route,
+  Router,
 } from "react-router-dom";
 import Login from './Components/Login';
 import { auth } from './firebase';
-import { logout } from './features/userSlice';
-import { useDispatch } from 'react-redux';
+import { login, logout, selectUser } from './features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import Profile from './Components/Profile';
 
 function App() {
+  const user = useSelector(selectUser);
   const dispatch = useDispatch();
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((userAuth) => {
       if(userAuth){
-        console.log(userAuth);
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email,  
+        }))
       }else{
-        dispatch(logout);
+        dispatch(logout());
       }
     })
     return unsub;
-  }, [])
-  const user = null;
+  }, [dispatch])
   return (
     <>
      <BrowserRouter>
@@ -34,6 +39,7 @@ function App() {
       <Route exact path="/" element={<HomeScreen />}></Route>
     )
     }
+    <Route path="/profile" element={<Profile />}></Route> 
     </Routes>
     </BrowserRouter>
     </>
