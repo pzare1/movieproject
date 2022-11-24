@@ -3,12 +3,14 @@ import { useSelector } from 'react-redux'
 import { selectUser } from '../features/userSlice'
 import { auth } from '../firebase'
 import Nav from './Nav'
+import { useNavigate } from 'react-router-dom';
 
 function Profile() {
     const user = useSelector(selectUser)
+    const history = useNavigate();
     const salam = () => {
         auth.signOut();
-        console.log(user);
+        history('/', { replace: true });
     }
     console.log(user);    
     return (
