@@ -12,7 +12,7 @@
     max-width: 400px;
     margin: 15px;
     border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 h3.text-secondary {
     text-align: center;
@@ -20,8 +20,11 @@ h3.text-secondary {
     font-weight: bolder;
 }
 .trending-row img:hover{
-    transform: scale(2);
+    transform: scale(1.2);
 
+}
+a.active {
+    max-width: 420px;
 }
 .norow{
     display: flex;
@@ -37,5 +40,10 @@ h3.text-secondary {
     transition: all 0.3s ease-in-out;
 }
 .norow img:hover{
-    transform: scale(2);
+    transform: scale(1.2);
 }
+@media only screen and (min-width: 600px) {
+    .linkmovie{
+        max-width: 420px;
+    }
+  }

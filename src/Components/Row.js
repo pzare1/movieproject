@@ -1,6 +1,7 @@
 import axios from '../Api/Axios'
 import React, { useEffect, useState } from 'react'
 import './Row.css'
+import { NavLink } from 'react-router-dom'
 function Row({title,fetchUrl,largeRow = false }) {
     const [movie, setmovie] = useState([])
     const baseURL = "https://image.tmdb.org/t/p/original/";
@@ -11,7 +12,6 @@ function Row({title,fetchUrl,largeRow = false }) {
             return getData;
         }
         fetchData();
-
     }, [fetchUrl])
 
     return (
@@ -22,7 +22,7 @@ function Row({title,fetchUrl,largeRow = false }) {
         </div>
         <div className={`row ${largeRow ? "trending-row" : "norow" }`}>
             {movie.map(item => (
-                <img src={`${baseURL}${item.backdrop_path}`}/>
+                <NavLink className="linkmovie" to={`movie/${item.id}`}><img src={`${baseURL}${item.backdrop_path}`}/></NavLink>
             ))}
         </div>
     </div>

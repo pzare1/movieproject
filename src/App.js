@@ -12,6 +12,7 @@ import { auth } from './firebase';
 import { login, logout, selectUser } from './features/userSlice';
 import { useDispatch, useSelector } from 'react-redux';
 import Profile from './Components/Profile';
+import MovieInside from './Components/MovieInside';
 
 function App() {
   const user = useSelector(selectUser);
@@ -40,6 +41,7 @@ function App() {
     )
     }
     <Route path="/profile" element={<Profile />}></Route> 
+    <Route path="/movie/:title" element={<MovieInside/>}></Route>
     </Routes>
     </BrowserRouter>
     </>
